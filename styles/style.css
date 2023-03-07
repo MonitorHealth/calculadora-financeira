@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+:root {
+  --clr-primary: #BBE5E1;
+  --clr-secondary: #0F5C60;
+  --clr-terciary: #3D989B;
+  --clr-font-primary: black;
+  --clr-font-secondary: white;
+
+  --clr-background-main: white;
+  --clr-shadow: #000000;
+}
+
+body {
+  background: url('../bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+
+  overflow-y: hidden;
+
+
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+main {
+  background-color: var(--clr-background-main);
+  max-width: 40%;
+  height: 100vh;
+
+  margin: 0 auto;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  -webkit-box-shadow: 5px 0px 40px 0px var(--clr-background-main);
+  -moz-box-shadow: 5px 0px 40px 0px var(--clr-background-main);
+  box-shadow: 5px 0px 40px 0px var(--clr-background-main);
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+
+  gap: 20px;
+}
+
+.inputs-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.labeled-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.labeled-input .label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin: 5px 0;
+}
+
+.input {
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+
+  border: 1px solid black;
+
+  outline: 0;
+
+  -webkit-box-shadow: 5px 5px 0px 0px var(--clr-shadow);
+  -moz-box-shadow: 5px 5px 0px 0px var(--clr-shadow);
+  box-shadow: 5px 5px 0px 0px var(--clr-shadow);
+
+}
+
+.half {
+  width: calc(50% - 5px);
+}
+
+.btn {
+  background-color: var(--clr-secondary);
+  color: var(--clr-font-secondary);
+
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid black;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+
+  transition: 150ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: var(--clr-terciary);
+}
+
+.div-resposta {
+  min-height: 20%;
+}
+
+.h2-resposta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Calculadora Financeira - Monitore Health</title>
+</head>
+<body>
+  <main>
+    <h1 class="title">Calculadora Financeira</h1>
+    <div class="inputs" id="form-calculadora">
+      <div class="inputs-horizontal">
+        <div class="labeled-input half">
+          <h2 class="label font-16">Valor das vacinas</h2>
+          <input class="input" type="number" id="ipt_valor" placeholder="">
+        </div>
+        <div class="labeled-input half">
+          <h2 class="label font-16">Quantidade de perdas por ano</h2>
+          <input class="input" type="number" id="ipt_qtd" placeholder="">
+        </div>
+      </div>
+      <button class="btn" onclick="calcular()">Calcular</button>
+    </div>
+    <div class="div-resposta">
+      <h2 class="h2-resposta" id="h2_resultado"></h2>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
