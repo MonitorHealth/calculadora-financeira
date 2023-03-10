@@ -9,19 +9,28 @@
 </head>
 <body>
   <main>
-    <h1 class="title">Calculadora Financeira</h1>
-    <div class="inputs" id="form-calculadora">
-      <div class="inputs-horizontal">
-        <div class="labeled-input half">
-          <h2 class="label font-16">Valor das vacinas</h2>
-          <input class="input" type="number" id="ipt_valor" placeholder="">
+    <div class="parte-1">
+      <section class="vacsense">
+        <img src="./images/logo_vacsense SEM FUNDO.png" alt="Logo VacSense" class="logo-v">
+        <h2 class="copyright">© 2023 Monitor Health</h2>
+      </section>
+      <section class="calculadora">
+        <img src="./images/logo_monitor health SEM FUNDO.png" alt="Logo Monitoring Health" class="logo-m">
+        <div class="inputs" id="form-calculadora">
+          <h1 class="title">Calcule Sua Economia</h1>
+          <div class="inputs-vertical">
+            <div class="labeled-input">
+              <h2 class="label">Valor das vacinas</h2>
+              <input class="input" type="number" id="ipt_valor" placeholder="">
+            </div>
+            <div class="labeled-input">
+              <h2 class="label">Quantidade de perdas por ano</h2>
+              <input class="input" type="number" id="ipt_qtd" placeholder="">
+            </div>
+          </div>
+          <button class="btn" onclick="calcular()">Calcular</button>
         </div>
-        <div class="labeled-input half">
-          <h2 class="label font-16">Quantidade de perdas por ano</h2>
-          <input class="input" type="number" id="ipt_qtd" placeholder="">
-        </div>
-      </div>
-      <button class="btn" onclick="calcular()">Calcular</button>
+      </section>
     </div>
     <div class="div-resposta">
       <h2 class="h2-resposta" id="h2_resultado"></h2>
