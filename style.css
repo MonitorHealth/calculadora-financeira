@@ -80,12 +80,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 20px;
 }
 
 .labeled-input {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -101,10 +99,8 @@ body {
 }
 
 .form button {
-  width: fit-content;
   padding: 20px;
   background: var(--clr-font-secondary);
   color: var(--clr-font-primary);
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
+  font-
 }
