@@ -1,172 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --clr-primary: #BDCEDB;
-  --clr-secondary: #0F5C60;
-  --clr-tertiary: #E4E4E3;
+  --clr-primary: #2e5670;
+  --clr-secondary: #1d3c50;
+  --clr-tertiary: #2e6284;
 
-  --clr-font-primary: black;
-  --clr-font-secondary: white;
+  --clr-font-primary: #ffffff;
+  --clr-font-secondary: #1d3c50;
 
-  --clr-background-main: white;
-  --clr-shadow: #000000;
+  --clr-background: #c4d7df;
 }
 
 body {
-  background-color: var(--clr-primary);
-  background-size: cover;
-  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-
-  overflow-y: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background: var(--clr-background)
 }
 
-.parte-1 {
-  padding: 0;
-  width: 100%;
+.header {
+  height: 80px;
+  width: 90%;
+  margin: 0 auto;
 
   display: flex;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
 }
 
-.vacsense {
-  max-height: 100vh;
+.logo-vacsense {
+  max-height: 90%;
+  width: auto;
+}
+
+.links {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 50%;
-}
-
-section {
-  margin: 0;
-  padding: 0;
-}
-
-.calculadora {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-
-  background-color: var(--clr-background-main);
-  width: 50%;
-  height: 100vh;
-  padding: 10px;
-}
-
-h1, h2, h3 {
-  margin: 0;
-}
-
-header {
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-
-  position: absolute;
-  right: 0;
-}
-
-.logo-m {
-  width: 130px;
-  height: auto;
-}
-
-.logo-v {
-  width: 300px;
-  align-self: center;
-  justify-self: center;
-}
-
-.vacsense h2 {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 12px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  text-align: center;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-
+  list-style: none;
   gap: 20px;
 }
 
-.inputs-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-content: space-between;
+.links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--clr-font-primary);
+}
+
+.links .selecionado a {
+  color: var(--clr-font-secondary);
+  font-weight: 800;
+}
+
+.btn-area-cliente {
+  background: var(--clr-font-secondary);
+  padding: 20px;
+  border-radius: 50px;
+}
+
+.btn-area-cliente a{
+  font-weight: 600;
+}
+
+.divider {
+  height: 100%;
+  padding: 10px 0;
+  width: 2px;
+  background-color: var(--clr-secondary);
+}
+
+.form {
+  width: calc(50% - 5em * 2);
+  padding: 5em;
 }
 
 .labeled-input {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-
-.labeled-input .label {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-  margin: 5px 0;
-}
-
-.input {
-  border: 0;
-  border-radius: 20px;
-  padding: 10px;
-
-  background-color: var(--clr-tertiary);
-  outline: 0;
-}
-
-
-.btn {
-  background-color: var(--clr-secondary);
-  color: var(--clr-font-secondary);
-
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-
-  align-self: center;
-
-  width: fit-content;
-
-
-  padding: 10px 20px;
-
-  border: 0;
-  border-radius: 20px;
-
-  transition: 150ms ease-in-out;
-}
-
-.div-resposta {
-  min-height: 20%;
-}
-
-.h2-resposta {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.copyright {
-  font-family: 'Montserrat', sans-serif;
 }

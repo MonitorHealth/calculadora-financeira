@@ -8,34 +8,37 @@
   <title>Calculadora Financeira - Monitore Health</title>
 </head>
 <body>
-  <main>
-    <div class="parte-1">
-      <section class="vacsense">
-        <img src="./images/logo_vacsense SEM FUNDO.png" alt="Logo VacSense" class="logo-v">
-        <h2 class="copyright">© 2023 Monitor Health</h2>
-      </section>
-      <section class="calculadora">
-        <img src="./images/logo_monitor health SEM FUNDO.png" alt="Logo Monitoring Health" class="logo-m">
-        <div class="inputs" id="form-calculadora">
-          <h1 class="title">Calcule Sua Economia</h1>
-          <div class="inputs-vertical">
-            <div class="labeled-input">
-              <h2 class="label">Valor das vacinas</h2>
-              <input class="input" type="number" id="ipt_valor" placeholder="">
-            </div>
-            <div class="labeled-input">
-              <h2 class="label">Quantidade de perdas por ano</h2>
-              <input class="input" type="number" id="ipt_qtd" placeholder="">
-            </div>
-          </div>
-          <button class="btn" onclick="calcular()">Calcular</button>
-        </div>
-      </section>
-    </div>
-    <div class="div-resposta">
-      <h2 class="h2-resposta" id="h2_resultado"></h2>
-    </div>
-  </main>
+  <div class="header">
+    <img src="./images/logo_vacsense SEM FUNDO.png" class="logo-vacsense">
+    <ul class="links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Quem Somos</a></li>
+      <li class="selecionado"><a href="#">VacSense</a></li>
+      <li><a href="#">Tecnologias</a></li>
+      <li><a href="#">Contato</a></li>
+      <li class="divider">&nbsp;</li>
+      <li class="btn-area-cliente"><a>Área do cliente</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <form class="form" action="">
+      <div class="labeled-input">
+        <label for="tipo_vacina">Tipo da vacina</label>
+        <select id="sel_tipo_vacina" name="tipo_vacina" required>
+          <option value="" disabled selected hidden>Selecione uma vacina</option>
+          <option value="Febre amarela">Febre amarela</option>
+          <option value="Gripe">Gripe</option>
+          <option value="BCG">BCG</option>
+          <option value="HPV">HPV</option>
+        </select>
+      </div>
+      <div class="labeled-input">
+        <label for="total_vacinas">Total de vacinas</label>
+        <input type="number" name="total_vacinas" id="ipt_total_vacinas">
+      </div>
+      <button type="submit">Calcular </button>
+    </form>
+  </div>
   <script src="index.js"></script>
 </body>
 </html>
