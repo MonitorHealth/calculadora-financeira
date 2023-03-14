@@ -74,6 +74,11 @@ body {
   background-color: var(--clr-secondary);
 }
 
+.main {
+  display: flex;
+  align-items: center;
+}
+
 .form {
   width: calc(50% - 5em * 2);
   padding: 5em;
@@ -88,6 +93,11 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.labeled-input label {
+  font-weight: 700;
+  color: var(--clr-font-secondary);
 }
 
 .labeled-input input, .labeled-input select {
@@ -107,4 +117,25 @@ body {
   color: var(--clr-font-primary);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+
+  border: 0;
+  border-radius: 50px;
+}
+
+#resultado {
+  display: none;
+  font-weight: 600;
+  text-align: center;
+  width: calc(50% - 5em * 2);
+  padding: 3em;
+  margin: 2em;
+
+  background-color: var(--clr-tertiary);
+  color: var(--clr-font-primary);
+  border-radius: 20px;
+}
+
+.comparacao {
+  display: flex;
+  justify-content: space-between;
 }

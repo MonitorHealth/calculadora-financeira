@@ -21,7 +21,7 @@
     </ul>
   </div>
   <div class="main">
-    <form class="form" action="">
+    <div class="form" action="">
       <div class="labeled-input">
         <label for="tipo_vacina">Tipo da vacina</label>
         <select id="sel_tipo_vacina" name="tipo_vacina" required>
@@ -40,8 +40,15 @@
         <label for="valor_vacina">Valor das vacinas</label>
         <input type="number" name="valor_vacina" id="ipt_valor_vacinas">
       </div>
-      <button type="submit">Calcular</button>
-    </form>
+      <button onclick="calcular()">Calcular</button>
+    </div>
+    <div id="resultado">
+
+      <div class="comparacao">
+        <div id="sem_vacsense"></div>
+        <div id="com_vacsense"></div>
+      </div>
+    </div>
   </div>
   <script src="index.js"></script>
 </body>

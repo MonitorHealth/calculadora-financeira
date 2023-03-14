@@ -1,18 +1,62 @@
 
 function calcular() {
-  var valorVacina = Number(ipt_valor.value)
-  var qtdPerdaVacinas  = Number(ipt_qtd.value)
+  var tipoVacina = sel_tipo_vacina.value
+  var qtdTotalVacinas = Number(ipt_total_vacinas.value)
+  var valorVacina = Number(ipt_valor_vacinas.value)
 
-  var perdaDiaria = qtdPerdaVacinas / 365
+  // Sem a VacSense
+  // Porcentagem média de perda de vacinas por dia;
+  var porcentagemPerdaVacinas = 45
 
-  var perdaDiaria = valorVacina * perdaDiaria
-  var perdaAnual = perdaDiaria * 365
-
-  h2_resultado.innerHTML = `Valor perdido por ano sem a nossa solução: R$${perdaAnual.toFixed(2)}`
-
-  // 85% do valor da perda anual, ou seja, 15% de economia
-  var valorComSolucao = perdaAnual * .85
+  // 45% do total de vacinas;
+  var qtdPerdaVacina = qtdTotalVacinas * (porcentagemPerdaVacinas / 100)
   
-  h2_resultado.innerHTML += `<br/>: R$${valorComSolucao.toFixed(2)}.`
+  // Quantidade em reais do prejuizo causado pela perda das vacinas em um mês;
+  var prejuizoReaisVacinaMes = qtdPerdaVacina * valorVacina
+
+  // Quantidade em reais do prejuizo caudado pela perda das vacnias em um ano;
+  var prejuizoReaisAno = prejuizoReaisVacinaMes * 12
+
+  // Com a VacSense
+  // Porcentagem média de vacinas poupadas com o VacSense;
+  var porcentagemVacinasPoupadas = 75
+
+  // Quantidade de vacinas poupadas com o VacSense;
+  var vacinasPoupadas = qtdPerdaVacina * (porcentagemVacinasPoupadas / 100)
+
+  // Quantidade em reais do quanto é poupado com o VacSense em um mês;
+  var qtdReaisPoupadosMes = valorVacina * vacinasPoupadas;
+
+  // Quantidade em reais do quanto é poupado com o VacSense em um ano;
+  var qtdReaisPoupadosAno = qtdReaisPoupadosMes * 12;
+
+  if(!tipoVacina || !qtdTotalVacinas || !valorVacina) {
+    alert('Insira todos os campos para continuar')
+    return
+  }
+
+  resultado.style.display = 'block'
+
+  resultado.innerHTML = `
+    tipo de vacina - ${tipoVacina}<br>
+    total de vacina - ${qtdTotalVacinas.toLocaleString('pt-BR')}<br>
+    valor da vacina - ${valorVacina.toLocaleString('pt-BR')}<br><br>
+  ` + resultado.innerHTML
+
+  sem_vacsense.innerHTML = `
+    Sem VacSense ❌💉<br>
+    vacinas perdidas - ${qtdPerdaVacina.toLocaleString('pt-BR')}<br><br>
+    
+    prejuízo p/mês - R$${prejuizoReaisVacinaMes.toLocaleString('pt-BR')}<br>
+    prejuízo p/ano - R$${prejuizoReaisAno.toLocaleString('pt-BR')}
+  `
+   
+  com_vacsense.innerHTML = `
+    Com VacSense ✅💉<br>
+    vacinas poupadas - ${vacinasPoupadas.toLocaleString('pt-BR')} <br><br>
+    
+    economia p/mês - R$${qtdReaisPoupadosMes.toLocaleString('pt-BR')} <br>
+    economia p/ano - R$${qtdReaisPoupadosAno.toLocaleString('pt-BR')}
+  `
 
 }
